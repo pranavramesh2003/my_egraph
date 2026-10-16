@@ -50,9 +50,8 @@ impl UnionFind {
         let b = self.find(b);
         if a == b { false }
         else { self.parent[b.usize()] = a; true} //return true, choose b's parent to be a. Note
-                                                 //that this automatically performs path
-                                                 //compression by setting the parent equal to the
-                                                 //canonical node
+                                                 //that this DOES NOT automatically performs path
+                                                 //compression
     }
 }
 
